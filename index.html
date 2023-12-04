@@ -101,7 +101,7 @@
         const inputElement = document.getElementById('input');
         const overlay = document.getElementById('overlay');
         const popupMessageElement = document.getElementById('popupMessage');
-    
+
         function writeToTerminal(message) {
             outputDiv.innerHTML += `<div>${message}</div>`;
             const lines = outputDiv.getElementsByTagName('div');
@@ -110,11 +110,11 @@
             }
             outputDiv.scrollTop = outputDiv.scrollHeight;
         }
-    
+
         function login() {
             const username = usernameInput.value.trim();
             const password = passwordInput.value.trim();
-    
+
             if (username.length > 5 && password.length > 5) {
                 showPopup('ACCESS GRANTED');
                 setTimeout(() => {
@@ -129,28 +129,28 @@
                 }, 5000);
             }
         }
-    
+
         function showPopup(message) {
             overlay.style.display = 'flex';
             popupMessageElement.textContent = message;
         }
-    
+
         function closePopup() {
             overlay.style.display = 'none';
         }
-    
+
         function showTerminal() {
             loginDiv.style.display = 'none';
             terminalDiv.style.display = 'block';
         }
-    
+
         function resetLogin() {
             usernameInput.value = '';
             passwordInput.value = '';
             loginDiv.style.display = 'block';
             terminalDiv.style.display = 'none';
         }
-    
+
         inputElement.addEventListener('keydown', (event) => {
             if (event.key === 'Enter') {
                 const command = inputElement.value;
@@ -159,7 +159,7 @@
                 inputElement.value = '';
             }
         });
-    
+
         function processCommand(command) {
             switch (command.toUpperCase()) {
                 case 'CLEAR':
@@ -171,6 +171,15 @@
                 case 'TRANSFER':
                     openTransferPage();
                     break;
+                case 'LOGS':
+                    openLogsPage();
+                    break;
+                case 'ADMIN':
+                    openAdminPage();
+                    break;
+                case 'List':
+                    openListPage();
+                    break;
                 // ADD EXTRA COMMAND: Uncomment the next line and add your custom command
                 // case 'YOUR_COMMAND':
                 //     yourCommandFunction();
@@ -179,20 +188,30 @@
                     writeToTerminal(`Command not recognized: ${command}`);
             }
         }
-    
+
         function clearTerminal() {
             outputDiv.innerHTML = '';
         }
-    
+
         function restartProgram() {
             closePopup();
             resetLogin();
         }
-    
+
         function openTransferPage() {
             window.open('transfer.html', '_blank', 'width=600,height=600');
         }
+
+        function openLogsPage() {
+            window.open('logs.html', '_blank', 'width=600,height=600');
+        }
+
+        function openAdminPage() {
+            window.open('admin2.html', '_blank', 'width=600,height=600');
+        }
+        function openListPage() {
+            window.open('List.html', '_blank', 'width=600,height=600');
+        }
     </script>
-    
 </body>
 </html>

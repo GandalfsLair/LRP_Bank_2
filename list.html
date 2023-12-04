@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Logs</title>
+    <style>
+       body {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            height: 100vh;
+        }
+
+        #logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .transaction {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .transaction-date {
+            font-weight: bold;
+        }
+
+        .transaction-details {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo1.jpg" alt="Logo" id="logo">
+    <h2>Available Commands</h2>
+
+    <div class="transaction">
+        <div class="transaction-date">TRANSFER</div>
+        <div class="transaction-details">
+            <p>Initiate interaccount funds transfer</p>
+            <p>Requires originating and destination account details</p>
+            <p>Security Code - Enabled</p>
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-date">CLEAR</div>
+        <div class="transaction-details">
+            <p>Clears the secure terminal command window</p>
+
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-date">LIST</div>
+        <div class="transaction-details">
+            <p>Lists available commands from the terminal window</p>
+
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-date">LOGS</div>
+        <div class="transaction-details">
+            <p>View transaction logs for named account</p>
+
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-date">ADMIN</div>
+        <div class="transaction-details">
+            <p>Enter the secure terminal admin panel</p>
+
+        </div>
+    </div>
+
+
+    <button onclick="confirmLogs()">OK</button>
+    <button onclick="cancelLogs()">CANCEL</button>
+
+    <script>
+        function confirmLogs() {
+            alert('Thank You');
+
+            // Close the webpage
+            window.close();
+        }
+
+        function cancelLogs() {
+        
+            // You can add any cleanup logic here if needed
+            window.close();
+        }
+    </script>
+</body>
+</html>

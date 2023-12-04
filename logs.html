@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Logs</title>
+    <style>
+       body {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            height: 100vh;
+        }
+
+        #logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .transaction {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .transaction-date {
+            font-weight: bold;
+        }
+
+        .transaction-details {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo1.jpg" alt="Logo" id="logo">
+    <h2>Transaction Logs:</h2>
+
+    <div class="transaction">
+        <div class="transaction-date">Date: 2023-01-10 12:30 PM</div>
+        <div class="transaction-details">
+            <p>Transfer from John Doe to Jane Smith</p>
+            <p>Amount: $500.00</p>
+            <p>Reference: TRX123456</p>
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-date">Date: 2023-02-05 03:45 PM</div>
+        <div class="transaction-details">
+            <p>Transfer from Alice Johnson to Bob Williams</p>
+            <p>Amount: $300.00</p>
+            <p>Reference: TRX789012</p>
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-date">Date: 2023-03-20 09:15 AM</div>
+        <div class="transaction-details">
+            <p>Transfer from Mary Davis to David Brown</p>
+            <p>Amount: $800.00</p>
+            <p>Reference: TRX345678</p>
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-date">Date: 2023-04-12 01:00 PM</div>
+        <div class="transaction-details">
+            <p>Transfer from Michael Wilson to Sarah Miller</p>
+            <p>Amount: $250.00</p>
+            <p>Reference: TRX901234</p>
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-date">Date: 2023-05-08 05:30 PM</div>
+        <div class="transaction-details">
+            <p>Transfer from Emily Moore to Christopher Lee</p>
+            <p>Amount: $600.00</p>
+            <p>Reference: TRX567890</p>
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-date">Date: 2023-06-25 11:45 AM</div>
+        <div class="transaction-details">
+            <p>Transfer from Robert Taylor to Olivia White</p>
+            <p>Amount: $400.00</p>
+            <p>Reference: TRX234567</p>
+        </div>
+    </div>
+
+    <button onclick="confirmLogs()">OK</button>
+    <button onclick="cancelLogs()">CANCEL</button>
+
+    <script>
+        function confirmLogs() {
+            alert('Thank You');
+
+            // Close the webpage
+            window.close();
+        }
+
+        function cancelLogs() {
+        
+            // You can add any cleanup logic here if needed
+            window.close();
+        }
+    </script>
+</body>
+</html>

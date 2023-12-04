@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+
+        .transaction {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .transaction-date {
+            font-weight: bold;
+        }
+
+        .transaction-details {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo1.jpg" alt="Logo" id="logo">
+    <h2>Admin Screen</h2>
+
+
+
+    <button onclick="confirmOK()">OK</button>
+    <button onclick="cancelCancel()">CANCEL</button>
+
+    <script>
+        function confirmOK() {
+            alert('Thank You');
+
+            // Close the webpage
+            window.close();
+        }
+
+        function cancelCancel() {
+        
+            // You can add any cleanup logic here if needed
+            window.close();
+        }
+    </script>
+</body>
+</html>
